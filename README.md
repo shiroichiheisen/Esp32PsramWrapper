@@ -4,9 +4,9 @@ A document for using the psram with the esp32, just a wrapper to make better cod
 
 If you want to contribute for better understanding and use of the Psram, just make a pull request
 
-## ☕ Using this library
+## ☕ Using the Psram
 
-To use this library, just declare the object and use the functions:
+To use the Psram, just declare the object and use the functions:
 
 ```
   char *day1 = (char *)ps_calloc(1, size of the string);

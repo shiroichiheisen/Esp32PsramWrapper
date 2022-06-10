@@ -40,23 +40,23 @@ dataReset(char *str, String data) //Reset the data
 
     If you want to clear and save some data on the psram, just pass the pointer to the data with the data (ex: dataReset(str, "Hello World");).
 
-## How to declare the object and use the functions:
+# How to declare the object and use the functions:
 
     ```
     setup() {
     }
     loop(){
-  char *day1 = (char *)ps_calloc(1, 1000000); // Allocates 1MB of memory
-  while(1){ //you need this while!!! if you declare globally the object on the line above, the object will inicialize before the psram can initialize, so a quick fix is using the while on the loop
-dataSave(day1, "Hello"); // Save data to day1
-Serial.println(day1); // Prints the data
-		delay(1000);			 // Wait 1 second
-Serial.println(dataSize(day1));	 // Get the size of the data in the string
-		delay(1000);			 // Wait 1 second
-		dataReset(day1);		 // Reset data on day1, to empty and write the data just use dataReset(day1, String newdata)
-Serial.println(day1); // Prints the data
-		delay(1000);			 // Wait 1 second
-  }
+    char *day1 = (char *)ps_calloc(1, 1000000); // Allocates 1MB of memory
+    while(1){ //you need this while!!! if you declare globally the object on the line above, the object will inicialize before the psram can initialize, so a quick fix is using the while on the loop
+    dataSave(day1, "Hello"); // Save data to day1
+    Serial.println(day1); // Prints the data
+	delay(1000);			 // Wait 1 second
+    Serial.println(dataSize(day1));	 // Get the size of the data in the string
+	delay(1000);			 // Wait 1 second
+	dataReset(day1);		 // Reset data on day1, to empty and write the data just use dataReset(day1, String newdata)
+    Serial.println(day1); // Prints the data
+	delay(1000);			 // Wait 1 second
+    }
     }
     ```
 

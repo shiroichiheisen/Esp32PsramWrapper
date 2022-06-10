@@ -1,6 +1,8 @@
 # Esp32PsramWrapper
 
-Library for using the psram with the esp32, just a wrapper to make better code read and make less dificult to implement the Psram;
+A document for using the psram with the esp32, just a wrapper to make better code read and make less dificult to implement the Psram;
+
+If you want to contribute for better understanding and use of the Psram, just make a pull request
 
 ## ☕ Using this library
 
